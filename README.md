@@ -47,7 +47,6 @@ Or just with with Launcher or Addon-Manager.
 | `/dl heatmap` | Toggle heatmap overlay on/off |
 | `/dl warning` | Toggle chat warnings on/off |
 | `/dl reset` | Reset indicator position to default |
-| `/hm` | Shortcut for `/dl heatmap` |
 
 All settings are automatically saved when you exit WoW.
 
