@@ -2,7 +2,8 @@
 ## Title: Deathlog for Vanilla WoW
 ## Author: Based on aaronma37/Deathlog and DaniilSokolyuk/RipMap
 ## Notes: Death heatmap overlay for the world map with danger indicator
-## Version: 1.0
+## Version: 1.1
+## SavedVariables: Deathlog_Settings
 
 Data\heatmap.lua
 Data\zone_ids.lua
