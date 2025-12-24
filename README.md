@@ -14,14 +14,6 @@ A death heatmap addon for Vanilla WoW (1.12) that displays player death location
 
 ![Heatmap Example 2](https://i.imgur.com/nLRLom0.png)
 
-## Version 1.1 Updates
-
-- **Improved Danger Indicator**: Thresholds now match heatmap colors accurately
-- **Unified Command System**: New `/dl` command with subcommands
-- **Warning Toggle**: Chat warnings can now be disabled
-- **Persistent Settings**: All settings saved between sessions (position, visibility, warnings)
-- **Subzone Fix**: Heatmap no longer disappears when entering subzones
-
 ## Installation
 
 1. Download or clone this repository
