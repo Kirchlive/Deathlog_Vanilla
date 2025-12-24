@@ -14,6 +14,14 @@ A death heatmap addon for Vanilla WoW (1.12) that displays player death location
 
 ![Heatmap Example 2](https://i.imgur.com/nLRLom0.png)
 
+## Version 1.1 Updates
+
+- **Improved Danger Indicator**: Thresholds now match heatmap colors accurately
+- **Unified Command System**: New `/dl` command with subcommands
+- **Warning Toggle**: Chat warnings can now be disabled
+- **Persistent Settings**: All settings saved between sessions (position, visibility, warnings)
+- **Subzone Fix**: Heatmap no longer disappears when entering subzones
+
 ## Installation
 
 1. Download or clone this repository
@@ -34,8 +42,14 @@ Or just with with Launcher or Addon-Manager.
 
 | Command | Description |
 |---------|-------------|
-| `/deathlog` or `/dl` | Toggle danger indicator visibility |
-| `/heatmap` or `/hm` | Toggle heatmap overlay on world map |
+| `/deathlog` or `/dl` | Show current settings and command list |
+| `/dl indicator` | Toggle danger indicator on/off |
+| `/dl heatmap` | Toggle heatmap overlay on/off |
+| `/dl warning` | Toggle chat warnings on/off |
+| `/dl reset` | Reset indicator position to default |
+| `/hm` | Shortcut for `/dl heatmap` |
+
+All settings are automatically saved when you exit WoW.
 
 ### Danger Indicator Colors
 
@@ -76,6 +90,13 @@ This addon includes death data from approximately **96,000 player deaths** acros
 - **Compatible**: WoW 1.12.x (Vanilla)
 
 ## Changelog
+
+### Version 1.1
+- Improved danger indicator thresholds to match heatmap colors
+- Unified command system (`/dl` with subcommands)
+- Added warning toggle (`/dl warning`)
+- All settings now saved between sessions
+- Fixed heatmap disappearing on subzone changes
 
 ### Version 1.0
 - Initial release
