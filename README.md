@@ -2,7 +2,7 @@
 
 A death heatmap addon for Vanilla WoW (1.12) that displays player death locations on the world map, helping you identify dangerous areas.
 
-![Heatmap Example](https://i.imgur.com/example.png)
+![Heatmap Example 1](https://i.imgur.com/EtdfDCD.png)
 
 ## Features
 
@@ -12,6 +12,8 @@ A death heatmap addon for Vanilla WoW (1.12) that displays player death location
 - **96,000+ Death Records**: Comprehensive death data from WoW Classic
 - **Movable UI**: Shift + Left-click to reposition the danger indicator
 
+![Heatmap Example 2](https://i.imgur.com/nLRLom0.png)
+
 ## Installation
 
 1. Download or clone this repository
@@ -19,18 +21,12 @@ A death heatmap addon for Vanilla WoW (1.12) that displays player death location
 3. Restart WoW or type `/reload`
 
 ```
-WoW/
 └── Interface/
-    └── AddOns/
-        └── Deathlog_Vanilla/
-            ├── Deathlog_Vanilla.toc
-            ├── Deathlog.lua
-            ├── HeatmapRenderer.lua
-            ├── DataLoader.lua
-            └── Data/
-                ├── heatmap.lua
-                └── zone_ids.lua
+└── AddOns/
+└── Deathlog_Vanilla/
 ```
+
+Or just with with Launcher or Addon-Manager.
 
 ## Usage
 
@@ -70,19 +66,7 @@ This addon includes death data from approximately **96,000 player deaths** acros
 - All Eastern Kingdoms zones
 - All Kalimdor zones
 - Major dungeons (Deadmines, Wailing Caverns, Shadowfang Keep, etc.)
-
-### Covered Zones
-
-| Eastern Kingdoms | Kalimdor |
-|-----------------|----------|
-| Elwynn Forest | Durotar |
-| Westfall | Mulgore |
-| Duskwood | The Barrens |
-| Redridge Mountains | Darkshore |
-| Stranglethorn Vale | Ashenvale |
-| Hillsbrad Foothills | Thousand Needles |
-| Arathi Highlands | Tanaris |
-| And many more... | And many more... |
+- Turtle Zones will be following
 
 ## Technical Details
 
@@ -102,17 +86,15 @@ This addon includes death data from approximately **96,000 player deaths** acros
 - 50 zones with death data
 - ~96,000 death records
 
-## Credits & Acknowledgments
+## Credits
 
-This addon is a port/conversion of death data and concepts from two excellent projects:
+This addon is a port/conversion from foundation and data of the projects:
 
 ### [Deathlog by aaronma37](https://github.com/aaronma37/Deathlog)
-The original Deathlog addon for WoW Classic (1.13+) which collects and displays player death data with beautiful heatmap visualizations. The death data and heatmap rendering concepts were adapted from this project.
+The original Deathlog addon for WoW Classic (1.13+). Adapted data and rendering.
 
 ### [RipMap by DaniilSokolyuk](https://github.com/DaniilSokolyuk/RipMap)
-A death heatmap addon for Vanilla WoW that provided the foundation for the 1.12-compatible implementation and danger indicator system.
-
-**Thank you to both authors for their excellent work!**
+Foundation for the 1.12 compatible implementation.
 
 ## License
 
