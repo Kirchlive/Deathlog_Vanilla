@@ -192,6 +192,11 @@ end
 function ToggleHeatmap()
     Deathlog_HeatVisible = not Deathlog_HeatVisible
 
+    -- Sync with saved settings
+    if Deathlog_Settings then
+        Deathlog_Settings.heatmapVisible = Deathlog_HeatVisible
+    end
+
     if overlayFrame then
         if Deathlog_HeatVisible then
             overlayFrame:Show()
@@ -205,16 +210,16 @@ function ToggleHeatmap()
                     end
                 end
             end
-            DEFAULT_CHAT_FRAME:AddMessage("Deathlog: Heatmap enabled")
+            DEFAULT_CHAT_FRAME:AddMessage("|cff00ff00Deathlog:|r Heatmap |cff00ff00enabled|r")
         else
             overlayFrame:Hide()
-            DEFAULT_CHAT_FRAME:AddMessage("Deathlog: Heatmap disabled")
+            DEFAULT_CHAT_FRAME:AddMessage("|cff00ff00Deathlog:|r Heatmap |cffff0000disabled|r")
         end
     else
         if Deathlog_HeatVisible then
-            DEFAULT_CHAT_FRAME:AddMessage("Deathlog: Heatmap will be shown when map is opened")
+            DEFAULT_CHAT_FRAME:AddMessage("|cff00ff00Deathlog:|r Heatmap will be shown when map is opened")
         else
-            DEFAULT_CHAT_FRAME:AddMessage("Deathlog: Heatmap disabled")
+            DEFAULT_CHAT_FRAME:AddMessage("|cff00ff00Deathlog:|r Heatmap |cffff0000disabled|r")
         end
     end
 end
@@ -258,10 +263,12 @@ end
 function OnMapChanged()
     local zoneName = GetSelectedMapZoneName()
 
+    -- If we can't determine zone, keep existing heatmap (don't clear)
     if not zoneName then
         return
     end
 
+    -- Only clear for continent views
     if IsContinentZone(zoneName) then
         ClearHeatTextures()
         currentMapId = nil
@@ -269,12 +276,13 @@ function OnMapChanged()
     end
 
     local mapId = GetZoneIDByName(zoneName)
+
+    -- Only update if we have a valid map ID and it's different from current
     if mapId and mapId ~= currentMapId then
         UpdateHeatmap(mapId)
-    elseif not mapId then
-        ClearHeatTextures()
-        currentMapId = nil
     end
+    -- If mapId is nil but we had a previous map, keep showing it
+    -- (handles subzone changes within the same zone)
 end
 
 -- Register for map events
